@@ -32,7 +32,7 @@ import net.minidev.json.JSONObject;
 
 
 @RestController
-@RequestMapping(path="/escola")
+@RequestMapping(path="/login")
 public class MainController {
 	
 	
