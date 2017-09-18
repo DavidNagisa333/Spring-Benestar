@@ -1,12 +1,12 @@
-package hello;
+package Serveis;
 
 import org.springframework.data.repository.CrudRepository;
 
-import hello.Prestacions;
+import Serveis.Copagaments;
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
 // CRUD refers Create, Read, Update, Delete
 
-public interface PrestacionsRepository extends CrudRepository<Prestacions, Long> {
+public interface CopagamentsRepository extends CrudRepository<Copagaments, Long> {
 
 }
