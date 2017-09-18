@@ -46,6 +46,7 @@ public class OrganitzacioController {
 		return "updated";
 	}
 	
+<<<<<<< HEAD
 	@RequestMapping(path="/deleteOrganitzacio", method=RequestMethod.DELETE)
 	public @ResponseBody String deleteOrganitzacio(@RequestParam Long id){
 		
@@ -54,4 +55,20 @@ public class OrganitzacioController {
 		return "deleted";
 	}
 
+=======
+	@GetMapping(path="/allServeis")
+	public @ResponseBody Iterable<User> getAllUsers() {
+		// This returns a JSON or XML with the users
+		return userRepository.findAll();
+<<<<<<< HEAD:src/main/java/hello/MainController.java
+	}
+	
+	@GetMapping(path="/addOficina")
+	public @ResponseBody String addNewOficina(@RequestParam Integer id, @RequestParam Integer Codi, @RequestParam String Poblacio, @RequestParam String provincia, @RequestParam String Direccio){
+		
+	}
+=======
+	}*/
+>>>>>>> 9fc6bbff759e19b4f7b8825805c0461fdf2b17db:src/main/java/organitzacions/OrganitzacioController.java
+>>>>>>> 118fc06e0e12b632a553d595c034a5bde6f35a56
 }
