@@ -1,7 +1,11 @@
 Manifest-Version: 1.0
 Implementation-Title: gs-oracle-data
 Implementation-Version: 0.1.0
+<<<<<<< HEAD
 Built-By: ssales
+=======
+Built-By: jcalle
+>>>>>>> 2e57ce003901abf839bb9f867c799177a82036a9
 Implementation-Vendor-Id: org.springframework
 Build-Jdk: 1.8.0_131
 Implementation-URL: http://projects.spring.io/spring-boot/gs-oracle-da
