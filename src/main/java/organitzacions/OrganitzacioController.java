@@ -50,5 +50,5 @@ public class OrganitzacioController {
 	}
 =======
 	}*/
->>>>>>> 9fc6bbff759e19b4f7b8825805c0461fdf2b17db:src/main/java/organitzacions/OrganitzacioController.java
+
 }
