@@ -23,8 +23,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+<<<<<<< HEAD:src/main/java/login/LoginController.java
+=======
 
 
+>>>>>>> 118fc06e0e12b632a553d595c034a5bde6f35a56:src/main/java/login/MainController.java
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import net.minidev.json.JSONObject;
@@ -32,7 +35,7 @@ import net.minidev.json.JSONObject;
 
 @RestController
 @RequestMapping(path="/login")
-public class MainController {
+public class LoginController {
 	
 	
 }

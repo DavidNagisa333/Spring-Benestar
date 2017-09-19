@@ -38,6 +38,13 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         
+        <!-- Use Mysql Connector -->
+        
+        <dependency>
+    		<groupId>mysql</groupId>
+    		<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+        
         <!-- Use Oracle Connector
 
 		<dependency>
