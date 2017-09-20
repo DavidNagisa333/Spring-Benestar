@@ -9,7 +9,6 @@ import java.util.List;
 @Entity
 @Table(name = "organitzacio")
 public class Organitzacio {
-
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,12 +17,12 @@ public class Organitzacio {
     @Column(name = "nom", length = 50, unique = true)
     @NotNull
     @Size(min = 4, max = 50)
-    private String username;
+    private String nom;
 
     @Column(name = "telefon")
     @NotNull
     @Size(min = 6, max = 15)
-    private int telefon;
+    private String telefon;
 
     @Column(name = "pais", length = 50)
     @NotNull
@@ -57,19 +56,19 @@ public class Organitzacio {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getNom() {
+		return nom;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 
-	public int getTelefon() {
+	public String getTelefon() {
 		return telefon;
 	}
 
-	public void setTelefon(int telefon) {
+	public void setTelefon(String telefon) {
 		this.telefon = telefon;
 	}
 
@@ -111,9 +110,7 @@ public class Organitzacio {
 
 	public void setActiu(Boolean actiu) {
 		this.actiu = actiu;
-	}
-    
-    
+	}    
 
 }
 
