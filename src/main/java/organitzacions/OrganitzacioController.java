@@ -54,4 +54,24 @@ public class OrganitzacioController {
 		
 		return "deleted";
 	}
+<<<<<<< HEAD
 }
+=======
+
+
+/*
+	@GetMapping(path="/allServeis")
+	public @ResponseBody Iterable<User> getAllUsers() {
+		// This returns a JSON or XML with the users
+		return userRepository.findAll();
+
+	}
+	
+	@GetMapping(path="/addOficina")
+	public @ResponseBody String addNewOficina(@RequestParam Integer id, @RequestParam Integer Codi, @RequestParam String Poblacio, @RequestParam String provincia, @RequestParam String Direccio){
+		
+	}
+	*/
+	}
+
+>>>>>>> c8f9f105eedb848b65f17e14a1ee0c20c1d4d56d

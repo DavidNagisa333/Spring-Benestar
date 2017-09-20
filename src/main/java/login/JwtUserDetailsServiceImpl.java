@@ -1,14 +1,13 @@
 package login;
 
+import login.UserRepository;
+import login.User;
+import login.JwtUserFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import login.JwtUserFactory;
-import login.UserRepository;
-import login.User;
 
 @Service
 public class JwtUserDetailsServiceImpl implements UserDetailsService {
