@@ -1,11 +1,30 @@
 Manifest-Version: 1.0
 Implementation-Title: gs-mysql-data
 Implementation-Version: 0.1.0
+<<<<<<< HEAD
 Built-By: dcaceres
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Built-By: ssales
+>>>>>>> 0bf123c2316efb45142c1222db19b6820c4eba1c
 Implementation-Vendor-Id: org.springframework
 Build-Jdk: 1.8.0_131
 Implementation-URL: http://projects.spring.io/spring-boot/gs-mysql-dat
  a/
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c8f9f105eedb848b65f17e14a1ee0c20c1d4d56d
+Built-By: jmalagarriga
+Implementation-Vendor-Id: org.springframework
+Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/gs-oracle-da
+ ta/
+>>>>>>> bd820e9ca7c1bb5129dd229527807885bf0411ec
+>>>>>>> 0bf123c2316efb45142c1222db19b6820c4eba1c
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 
