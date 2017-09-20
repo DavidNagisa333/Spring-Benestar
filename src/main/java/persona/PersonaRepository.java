@@ -2,7 +2,7 @@ package persona;
 
 import org.springframework.data.repository.CrudRepository;
 
-import hello.Persona;
+import persona.Persona;
 
 public interface PersonaRepository extends CrudRepository<Persona, Long>{
 	
