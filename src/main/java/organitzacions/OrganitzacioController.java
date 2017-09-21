@@ -54,6 +54,10 @@ public class OrganitzacioController {
 		
 		return "deleted";
 	}
+<<<<<<< HEAD
+}
+=======
+
 
 /*
 	@GetMapping(path="/allServeis")
@@ -67,16 +71,7 @@ public class OrganitzacioController {
 	public @ResponseBody String addNewOficina(@RequestParam Integer id, @RequestParam Integer Codi, @RequestParam String Poblacio, @RequestParam String provincia, @RequestParam String Direccio){
 		
 	}
-<<<<<<< HEAD
 	*/
-=======
-=======
-	}*/
-<<<<<<< HEAD
+	}
 
-=======
->>>>>>> 9fc6bbff759e19b4f7b8825805c0461fdf2b17db:src/main/java/organitzacions/OrganitzacioController.java
->>>>>>> 118fc06e0e12b632a553d595c034a5bde6f35a56
->>>>>>> 2c770d3aab9eef420542794c2ed039fc8e8a6033
->>>>>>> 2e57ce003901abf839bb9f867c799177a82036a9
-}
+>>>>>>> c8f9f105eedb848b65f17e14a1ee0c20c1d4d56d
