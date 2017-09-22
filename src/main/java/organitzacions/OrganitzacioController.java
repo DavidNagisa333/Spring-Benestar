@@ -84,6 +84,9 @@ public class OrganitzacioController {
 		
 		return "deleted";
 	}
+<<<<<<< HEAD
+}
+=======
 
 
 /*
@@ -101,3 +104,4 @@ public class OrganitzacioController {
 	*/
 	}
 
+>>>>>>> c8f9f105eedb848b65f17e14a1ee0c20c1d4d56d
