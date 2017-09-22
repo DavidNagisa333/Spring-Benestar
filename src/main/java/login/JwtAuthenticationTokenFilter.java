@@ -33,7 +33,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
         String authToken = request.getHeader(this.tokenHeader);
-        // authToken.startsWith("Bearer ")
+        //authToken.startsWith("Bearer ");
         // String authToken = header.substring(7);
 
         if(authToken != null && authToken.startsWith("Bearer ")) {
@@ -41,11 +41,10 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         }
 
         String username = jwtTokenUtil.getUsernameFromToken(authToken);
-
+        
         logger.info("checking authentication für user " + username);
         System.out.print(username);
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-
             // It is not compelling necessary to load the use details from the database. You could also store the information
             // in the token and read it from it. It's up to you ;)
             UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
