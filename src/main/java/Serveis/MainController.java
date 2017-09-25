@@ -21,7 +21,7 @@ import Serveis.Copagaments;
 
 
 @Controller    // This means that this class is a Controller
-@RequestMapping(path="/serveis") // This means URL's start with /demo (after Application path)
+@RequestMapping(path="/benestar") // This means URL's start with /demo (after Application path)
 public class MainController {
 	@Autowired
 	private PrestacionsRepository prestacionsRepository;
@@ -126,15 +126,15 @@ public class MainController {
 	  
 	  responseMap.put("prestacions", prestacions);
 	  
-	  float num_persones = 0.0f;
+	  float num_prestacions = 0.0f;
 	  
 	  for(Prestacions p : prestacions){
-	   num_persones = num_persones + 1;
+	   num_prestacions = num_prestacions + 1;
 	  }
 	  
 	  //System.out.print("\n\n CEIL " + Math.ceil(num_persones / ipp) + "\n\n");
 	  
-	  Long pagines = Math.round(Math.ceil(num_persones / ipp));
+	  Long pagines = Math.round(Math.ceil(num_prestacions / ipp));
 	  
 	  //System.out.print("\n\nIPP: " + ipp + ", num_persones: " + num_persones + ", pagines: " + pagines);
 	  
