@@ -1,5 +1,8 @@
 package Serveis;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,7 +34,7 @@ public class MainController {
 	
 	
 ///////////////////////////////////////////////////////////////////////////////////////////////ADD	
-	@RequestMapping(path="/addPrestacio", method = RequestMethod.POST) // Map ONLY GET Requests
+	@RequestMapping(path="/addPrestacio", method = RequestMethod.POST) 
 	public @ResponseBody String addPrestacio (@RequestParam Long tipus, @RequestParam String descripcio) {
 		Prestacions n = new Prestacions(); //nom .java
 		n.setTipus(tipus);
@@ -113,11 +116,33 @@ public class MainController {
 	
 /////////////////////////////////////////////////////////////////////////////////////////////ALL
 
-	@GetMapping(path="/allPrestacio")
-	public @ResponseBody Iterable<Prestacions> getAllPrestacions() {
-		// This returns a JSON or XML with the users
-		return prestacionsRepository.findAll();
-	}
+	
+	
+	@RequestMapping(method=RequestMethod.GET, path="/allPrestacio")
+	 public @ResponseBody Map<String, Object> allprestacions(@RequestParam float ipp) {
+		System.out.print("x");
+	  Map<String, Object> responseMap = new HashMap<String, Object>();
+	  Iterable<Prestacions> prestacions = prestacionsRepository.findAll();
+	  
+	  responseMap.put("prestacions", prestacions);
+	  
+	  float num_persones = 0.0f;
+	  
+	  for(Prestacions p : prestacions){
+	   num_persones = num_persones + 1;
+	  }
+	  
+	  //System.out.print("\n\n CEIL " + Math.ceil(num_persones / ipp) + "\n\n");
+	  
+	  Long pagines = Math.round(Math.ceil(num_persones / ipp));
+	  
+	  //System.out.print("\n\nIPP: " + ipp + ", num_persones: " + num_persones + ", pagines: " + pagines);
+	  
+	  responseMap.put("pagines", pagines);
+	  
+	  return responseMap;
+	 }
+	
 	
 	@GetMapping(path="/allCopagament")
 	public @ResponseBody Iterable<Copagaments> getAllCopagaments() {
