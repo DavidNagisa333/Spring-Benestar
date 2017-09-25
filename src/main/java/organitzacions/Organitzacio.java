@@ -24,10 +24,10 @@ public class Organitzacio {
     @Size(min = 6, max = 15)
     private String telefon;
 
-    @Column(name = "pais", length = 50)
+    @Column(name = "localitat", length = 50)
     @NotNull
     @Size(min = 2, max = 50)
-    private String pais;
+    private String localitat;
 
     @Column(name = "correu", length = 50)
     @NotNull
@@ -72,12 +72,12 @@ public class Organitzacio {
 		this.telefon = telefon;
 	}
 
-	public String getPais() {
-		return pais;
+	public String getLocalitat() {
+		return localitat;
 	}
 
-	public void setPais(String pais) {
-		this.pais = pais;
+	public void localitat(String localitat) {
+		this.localitat = localitat;
 	}
 
 	public String getCorreu() {
