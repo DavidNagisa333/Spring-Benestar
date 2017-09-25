@@ -1,7 +1,15 @@
 Manifest-Version: 1.0
 Implementation-Title: gs-mysql-data
 Implementation-Version: 0.1.0
+<<<<<<< HEAD
 Built-By: dcaceres
+=======
+<<<<<<< HEAD
+Built-By: ssales
+=======
+Built-By: jcalle
+>>>>>>> fabe7d5dfc2f0776689ef6c20a4b1ab95d49c288
+>>>>>>> 9374cc9b0a051684be489f1acb801258f42d2df0
 Implementation-Vendor-Id: org.springframework
 Build-Jdk: 1.8.0_131
 Implementation-URL: http://projects.spring.io/spring-boot/gs-mysql-dat
