@@ -14,16 +14,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.benestar.repositories.*;
 import org.benestar.classes.*;
 
-
-
 @Controller    // This means that this class is a Controller
-<<<<<<< HEAD:src/main/java/Serveis/MainController.java
 @RequestMapping(path="/benestar") // This means URL's start with /demo (after Application path)
-public class MainController {
-=======
-@RequestMapping(path="/serveis") // This means URL's start with /demo (after Application path)
 public class ServeisController {
->>>>>>> 9374cc9b0a051684be489f1acb801258f42d2df0:src/main/java/org/benestar/controllers/ServeisController.java
+	
 	@Autowired
 	private PrestacionsRepository prestacionsRepository;
 	
