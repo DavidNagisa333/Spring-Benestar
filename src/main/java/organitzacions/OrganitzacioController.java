@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import persona.Persona;
+import organitzacions.Organitzacio;
 
 
 @Controller 
@@ -84,9 +84,7 @@ public class OrganitzacioController {
 		
 		return "deleted";
 	}
-<<<<<<< HEAD
-}
-=======
+
 
 
 /*
@@ -104,4 +102,3 @@ public class OrganitzacioController {
 	*/
 	}
 
->>>>>>> c8f9f105eedb848b65f17e14a1ee0c20c1d4d56d
