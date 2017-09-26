@@ -2,33 +2,36 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    
     <groupId>org.springframework</groupId>
     <artifactId>gs-mysql-data</artifactId>
     <version>0.1.0</version>
+    
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.6.RELEASE</version>
     </parent>
-    <dependencies>
     
-     <!-- https://mvnrepository.com/artifact/org.springframework.mobile/spring-mobile-device -->
-  <dependency>
-
-      <groupId>org.springframework.mobile</groupId>
-      <artifactId>spring-mobile-device</artifactId>
-      <version>1.1.5.RELEASE</version>
-  </dependency>
-     <dependency>
-   <groupId>org.springframework.boot</groupId>
-   <artifactId>spring-boot-starter-security</artifactId>
-  </dependency>
+ <dependencies>
+ 
+  <!-- https://mvnrepository.com/artifact/org.springframework.mobile/spring-mobile-device -->
+    <dependency>
+   <groupId>org.springframework.mobile</groupId>
+        <artifactId>spring-mobile-device</artifactId>
+        <version>1.1.5.RELEASE</version>
+    </dependency>
+   
+      <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
   
-  <dependency>
-   <groupId>io.jsonwebtoken</groupId>
-   <artifactId>jjwt</artifactId>
-   <version>0.6.0</version>
-  </dependency>
+   <dependency>
+    <groupId>io.jsonwebtoken</groupId>
+     <artifactId>jjwt</artifactId>
+     <version>0.6.0</version>
+   </dependency>
     
      <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-rest-core -->
   <dependency>
@@ -72,10 +75,4 @@
             </plugin>
         </plugins>
     </build>
-<<<<<<< HEAD
-    
-    
 </project>
-=======
-</project>
->>>>>>> fabe7d5dfc2f0776689ef6c20a4b1ab95d49c288
