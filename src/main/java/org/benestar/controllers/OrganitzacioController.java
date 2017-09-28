@@ -12,8 +12,12 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+<<<<<<< HEAD:src/main/java/organitzacions/OrganitzacioController.java
+import organitzacions.Organitzacio;
+=======
 import org.benestar.classes.*;
 import org.benestar.repositories.*;
+>>>>>>> b4936c45bac090a0a4c7808491f6ee7c43e43cc2:src/main/java/org/benestar/controllers/OrganitzacioController.java
 
 //@Controller 
 @RequestMapping(path="/organitzacio")
@@ -80,7 +84,10 @@ public class OrganitzacioController {
 		
 		return "deleted";
 	}
+<<<<<<< HEAD:src/main/java/organitzacions/OrganitzacioController.java
+=======
 }
+>>>>>>> b4936c45bac090a0a4c7808491f6ee7c43e43cc2:src/main/java/org/benestar/controllers/OrganitzacioController.java
 
 
 
@@ -97,3 +104,8 @@ public class OrganitzacioController {
 		
 	}
 	*/
+<<<<<<< HEAD:src/main/java/organitzacions/OrganitzacioController.java
+	}
+
+=======
+>>>>>>> b4936c45bac090a0a4c7808491f6ee7c43e43cc2:src/main/java/org/benestar/controllers/OrganitzacioController.java
