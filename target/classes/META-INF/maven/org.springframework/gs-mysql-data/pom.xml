@@ -13,18 +13,6 @@
         <version>1.5.6.RELEASE</version>
     </parent>
     
-<<<<<<< HEAD
-     <!-- https://mvnrepository.com/artifact/org.springframework.mobile/spring-mobile-device -->
-  <dependency>
-      <groupId>org.springframework.mobile</groupId>
-      <artifactId>spring-mobile-device</artifactId>
-      <version>1.1.5.RELEASE</version>
-  </dependency>
-     <dependency>
-   <groupId>org.springframework.boot</groupId>
-   <artifactId>spring-boot-starter-security</artifactId>
-  </dependency>
-=======
  <dependencies>
  
   <!-- https://mvnrepository.com/artifact/org.springframework.mobile/spring-mobile-device -->
@@ -38,7 +26,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
->>>>>>> 1a2532029c426297b1122a7f252c1b00324fa191
   
    <dependency>
     <groupId>io.jsonwebtoken</groupId>
@@ -56,6 +43,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        
         
         <!-- JPA Data (We are going to use Repositories, Entities, Hibernate, etc...) -->
         
@@ -88,8 +76,4 @@
             </plugin>
         </plugins>
     </build>
-<<<<<<< HEAD
-    
-=======
->>>>>>> 1a2532029c426297b1122a7f252c1b00324fa191
 </project>
