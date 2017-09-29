@@ -1,4 +1,4 @@
-package org.benestar.repositories;
+/*package org.benestar.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import org.benestar.classes.Familia;
@@ -9,4 +9,4 @@ import org.benestar.classes.Familia;
 
 public interface FamiliaRepository extends CrudRepository<Familia, Long> {
 
-}
+}*/

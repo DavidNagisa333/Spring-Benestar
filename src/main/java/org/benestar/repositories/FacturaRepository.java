@@ -1,4 +1,4 @@
-package org.benestar.repositories;
+/*package org.benestar.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import org.benestar.classes.Factura;
@@ -9,4 +9,4 @@ import org.benestar.classes.Factura;
 
 public interface FacturaRepository extends CrudRepository<Factura, Long> {
 
-}
+}*/

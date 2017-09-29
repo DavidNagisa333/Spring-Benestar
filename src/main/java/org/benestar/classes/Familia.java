@@ -1,4 +1,4 @@
-package org.benestar.classes;
+/*package org.benestar.classes;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -76,4 +76,4 @@ public class Familia {
 		this.factura = factura;
 	}
     
-}
+}*/

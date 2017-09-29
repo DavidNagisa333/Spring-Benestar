@@ -1,4 +1,4 @@
-package org.benestar.classes;
+/*package org.benestar.classes;
 
 
 import javax.persistence.Column;
@@ -83,4 +83,4 @@ public class Factura {
 		this.id_familia = familia;
 	}
 	
-}
+}*/
