@@ -16,6 +16,7 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.benestar.login.JwtTokenUtil;
 import java.io.IOException;
 
 @Component
@@ -41,7 +42,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         if(authToken != null && authToken.startsWith("Bearer ")) {
             authToken = authToken.substring(7);
         }
-
+        authToken = jwtTokenUtil.refreshToken(authToken);
         String username = jwtTokenUtil.getUsernameFromToken(authToken);
         
         logger.info("checking authentication für user " + username);
