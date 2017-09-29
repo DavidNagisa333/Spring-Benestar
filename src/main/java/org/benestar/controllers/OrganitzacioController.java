@@ -8,28 +8,30 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+<<<<<<< HEAD
 //import organitzacions.Organitzacio;
 
+=======
+>>>>>>> 6c01cf619ef22e063b54cb779167f0e15c56a3dd
 import org.benestar.classes.*;
 import org.benestar.repositories.*;
 
-//@Controller 
+
+@Controller 
 @RequestMapping(path="/organitzacio")
 public class OrganitzacioController {
 	
 	@Autowired
-	private OrganitzacioRepository organitzacioRepository;
-	
-	
+	private OrganitzacioRepository organitzacioRepository;	
 	
 	
 	@RequestMapping(path="/listOrganitzacions", method=RequestMethod.GET)
 	public @ResponseBody Map<String, Object> getAllOrganitzacions(@RequestParam int itemsPerPage) {
-
 		Map<String, Object> responseMap = new HashMap<String, Object>();
 		Iterable<Organitzacio> organitzacions = organitzacioRepository.findAll();
 		
@@ -50,39 +52,29 @@ public class OrganitzacioController {
 	
 	
 	@RequestMapping(path="/addOrganitzacio", method=RequestMethod.POST)
-	public @ResponseBody String addOrganitzacio(@RequestParam Long id, @RequestParam String nom, @RequestParam String telefon){
-		
-		Organitzacio o = new Organitzacio();		
-		o.setId(id);
-		o.setNom(nom);
-		o.setTelefon(telefon);		
-		
-		organitzacioRepository.save(o);
-		
+	public @ResponseBody String addOrganitzacio(@RequestBody Organitzacio item){
+		organitzacioRepository.save(item);
 		return "saved";
 	}
 	
 	@RequestMapping(path="/updateOrganitzacio", method=RequestMethod.PUT)
-	public @ResponseBody String updateOrganitzacio(@RequestParam Long id, @RequestParam String nom, @RequestParam String telefon){
-		
-		Organitzacio o = organitzacioRepository.findOne(id);			
-		o.setNom(nom);
-		o.setTelefon(telefon);		
-		
-		organitzacioRepository.save(o);
-		
+	public @ResponseBody String updateOrganitzacio(@RequestBody Organitzacio item){		
+		organitzacioRepository.save(item);		
 		return "updated";
 	}
 	
 
-	@RequestMapping(path="/deleteOrganitzacio", method=RequestMethod.DELETE)
+	@RequestMapping(path="/delOrganitzacio", method=RequestMethod.DELETE)
 	public @ResponseBody String deleteOrganitzacio(@RequestParam Long id){
-		
 		organitzacioRepository.delete(id);	
-		
 		return "deleted";
 	}
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6c01cf619ef22e063b54cb779167f0e15c56a3dd
 
 
 /*
