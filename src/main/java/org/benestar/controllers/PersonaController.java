@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.benestar.repositories.PersonaRepository;
-import org.benestar.classes.*;
+import org.benestar.classes.Persona;
 
 @Controller
 @RequestMapping(path="/benestar")
