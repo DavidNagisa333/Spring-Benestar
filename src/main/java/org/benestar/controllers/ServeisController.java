@@ -115,7 +115,6 @@ public class ServeisController {
 	
 	@RequestMapping(method=RequestMethod.GET, path="/allPrestacio")
 	 public @ResponseBody Map<String, Object> allprestacions(@RequestParam float ipp) {
-		System.out.print("x");
 	  Map<String, Object> responseMap = new HashMap<String, Object>();
 	  Iterable<Prestacions> prestacions = prestacionsRepository.findAll();
 	  
