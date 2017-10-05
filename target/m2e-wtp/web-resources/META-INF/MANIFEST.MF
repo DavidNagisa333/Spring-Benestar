@@ -1,13 +1,7 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD:target/classes/META-INF/MANIFEST.MF
-Implementation-Title: gs-mysql-data
-Implementation-Version: 0.1.0
-Built-By: dcaceres
-=======
 Implementation-Title: benestar
 Implementation-Version: 1.0
-Built-By: ssales
->>>>>>> 391a1fd10fdb5ffdea3ad7915d3dcb521501f639:target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+Built-By: dcaceres
 Implementation-Vendor-Id: org.springframework
 Build-Jdk: 1.8.0_131
 Implementation-URL: http://projects.spring.io/spring-boot/benestar/

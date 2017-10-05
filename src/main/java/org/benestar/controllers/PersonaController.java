@@ -42,7 +42,7 @@ public class PersonaController {
 		persona.setNom(nom);
 		persona.setCognoms(cognoms);
 		//persona.setNaixement(naixement);
-		persona.setNaixement(avui);
+		//persona.setNaixement(avui);
 		persona.setCorreu(correu);
 		persona.setTelefon(telefon);
 		persona.setMobil(mobil);
@@ -101,7 +101,7 @@ public class PersonaController {
 		persona.setNom(nom);
 		persona.setCognoms(cognoms);
 		//persona.setNaixement(naixement);
-		persona.setNaixement(avui);
+		//persona.setNaixement(avui);
 		persona.setCorreu(correu);
 		persona.setTelefon(telefon);
 		persona.setMobil(mobil);
