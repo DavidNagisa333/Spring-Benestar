@@ -13,11 +13,6 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-<<<<<<< HEAD
-//import organitzacions.Organitzacio;
-
-=======
->>>>>>> 6c01cf619ef22e063b54cb779167f0e15c56a3dd
 import org.benestar.classes.*;
 import org.benestar.repositories.*;
 
@@ -70,11 +65,7 @@ public class OrganitzacioController {
 		return "deleted";
 	}
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 6c01cf619ef22e063b54cb779167f0e15c56a3dd
 
 
 /*
