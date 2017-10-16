@@ -16,6 +16,7 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.benestar.login.JwtTokenUtil;
 import java.io.IOException;
 
 @Component
@@ -41,11 +42,10 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         if(authToken != null && authToken.startsWith("Bearer ")) {
             authToken = authToken.substring(7);
         }
-
+        authToken = jwtTokenUtil.refreshToken(authToken);
         String username = jwtTokenUtil.getUsernameFromToken(authToken);
         
         logger.info("checking authentication für user " + username);
-        System.out.print(username);
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             // It is not compelling necessary to load the use details from the database. You could also store the information
             // in the token and read it from it. It's up to you ;)

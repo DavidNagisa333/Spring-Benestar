@@ -13,6 +13,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.sound.midi.Soundbank;
+
 @Component
 public class JwtTokenUtil implements Serializable {
 
@@ -32,7 +34,9 @@ public class JwtTokenUtil implements Serializable {
 
     @Value("${jwt.expiration}")
     private Long expiration;
-
+    
+    
+    
     public String getUsernameFromToken(String token) {
         String username;
         try {
@@ -91,8 +95,8 @@ public class JwtTokenUtil implements Serializable {
         return claims;
     }
 
-    private Date generateExpirationDate() {
-        return new Date(System.currentTimeMillis() + expiration * 1000);
+    private Date generateExpirationDate() {    	
+        return new Date(System.currentTimeMillis() + expiration * 3);
     }
 
     private Boolean isTokenExpired(String token) {
@@ -159,7 +163,11 @@ public class JwtTokenUtil implements Serializable {
         JwtUser user = (JwtUser) userDetails;
         final String username = getUsernameFromToken(token);
         final Date created = getCreatedDateFromToken(token);
-        //final Date expiration = getExpirationDateFromToken(token);
+        final Date expireTime = getExpirationDateFromToken(token);
+       
+        
+        //See the expiration Date
+        //System.out.println(expireTime);
         return (
                 username.equals(user.getUsername())
                         && !isTokenExpired(token)

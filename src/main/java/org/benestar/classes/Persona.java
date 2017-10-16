@@ -25,10 +25,10 @@ public class Persona {
     @NotNull
     private String cognoms;
 	
-	@Column(name = "naixement")
+	/*@Column(name = "naixement")
     //@NotNull
     private LocalDate naixement;
-	
+	*/
 	@Column(name = "correu", length = 50)
     @NotNull
     private String correu;
@@ -72,7 +72,7 @@ public class Persona {
 	public void setCognoms(String cognoms) {
 		this.cognoms = cognoms;
 	}
-
+/*
 	public LocalDate getNaixement() {
 		return naixement;
 	}
@@ -80,7 +80,7 @@ public class Persona {
 	public void setNaixement(LocalDate naixement) {
 		this.naixement = naixement;
 	}
-
+*/
 	public String getCorreu() {
 		return correu;
 	}

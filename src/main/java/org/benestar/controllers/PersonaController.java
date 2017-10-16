@@ -1,27 +1,17 @@
 package org.benestar.controllers;
 
-import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import org.benestar.repositories.PersonaRepository;
-import org.benestar.classes.*;
+import org.benestar.classes.Persona;
 
 @Controller
 @RequestMapping(path="/benestar")
@@ -29,6 +19,7 @@ public class PersonaController {
 	
 	@Autowired
 	private PersonaRepository personaRepository;
+
 	
 	
 	
@@ -36,7 +27,7 @@ public class PersonaController {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
 	// A F E G I R   U N A   P E R S O N A
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	// http://localhost:8080/benestar/addPersona?nom="cc"&cognoms="cc"&correu="cc"&telefon="cc"&mobil="cc"&adreca="cc"&localitat="cc"&comarca="ff"
+
 	@RequestMapping(method=RequestMethod.POST, path="/afegirPersona")
 	public @ResponseBody void afegirPersona(@RequestParam String nom, @RequestParam String cognoms, /*@RequestParam LocalDate naixement,*/ @RequestParam String correu,
 										   @RequestParam String telefon, @RequestParam String mobil, @RequestParam String adreca, @RequestParam String localitat,
@@ -51,7 +42,7 @@ public class PersonaController {
 		persona.setNom(nom);
 		persona.setCognoms(cognoms);
 		//persona.setNaixement(naixement);
-		persona.setNaixement(avui);
+		//persona.setNaixement(avui);
 		persona.setCorreu(correu);
 		persona.setTelefon(telefon);
 		persona.setMobil(mobil);
@@ -69,6 +60,7 @@ public class PersonaController {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
 	// L L I S T A R   T O T E S   L E S   P E R S O N E S
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
 	@RequestMapping(method=RequestMethod.GET, path="/llistarPersones")
 	public @ResponseBody Map<String, Object> llistarPersones(@RequestParam int ipp) {
 		
@@ -89,21 +81,6 @@ public class PersonaController {
 		
 		return responseMap;
 	}
-
-	/*@RequestMapping(method=RequestMethod.GET, path="/llistarPersones")
-	public @ResponseBody Iterable<Persona> llistarPersones() {
-		
-		return personaRepository.findAll();
-	}*/
-	
-	
-	
-	
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
-	// L L I S T A R   "X"   P E R S O N E S,   S E G O N S   A T R I B U T
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	
 	
 	
 	
@@ -124,7 +101,7 @@ public class PersonaController {
 		persona.setNom(nom);
 		persona.setCognoms(cognoms);
 		//persona.setNaixement(naixement);
-		persona.setNaixement(avui);
+		//persona.setNaixement(avui);
 		persona.setCorreu(correu);
 		persona.setTelefon(telefon);
 		persona.setMobil(mobil);
@@ -132,11 +109,7 @@ public class PersonaController {
 		persona.setLocalitat(localitat);
 		persona.setComarca(comarca);
 		
-		personaRepository.save(persona);
-		
-		
-		
-		
+		personaRepository.save(persona);		
 	}
 	
 	
@@ -146,18 +119,10 @@ public class PersonaController {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
 	// E S B O R R A R   U N A   P E R S O N A
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
 	@RequestMapping(method=RequestMethod.DELETE, path = "/esborrarPersona")
 	public @ResponseBody void esborrarPersona (@RequestParam Long id) {
 
 		personaRepository.delete(id);
-	}
-	
-	
-	
-	
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
-	// E S B O R R A R   "X"   P E R S O N E S,   S E G O N S   A T R I B U T
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-		
+	}	
 }
