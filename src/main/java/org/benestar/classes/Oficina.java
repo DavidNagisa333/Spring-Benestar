@@ -5,20 +5,30 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity // This tells Hibernate to make a table out of this class
+@Entity
+@Table(name = "oficina") // This tells Hibernate to make a table out of this class
 public class Oficina {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+	@Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+	
+	@Column(name = "codi_postal", length = 8)
+    @NotNull
     private Integer CodiPostal;
-
+	
+	@Column(name = "poblacio", length = 50)
+    @NotNull
     private String Poblacio;
      
+	@Column(name = "provincia", length = 50)
+    @NotNull
     private String Provincia;
     
+	@Column(name = "direccio", length = 100)
+    @NotNull
     private String Direccio;
-
+	
 	public Long getId() {
 		return id;
 	}
