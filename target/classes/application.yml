@@ -1,0 +1,36 @@
+#server:
+#  contextPath:
+# JACKSON
+#spring:
+#  jackson:
+#    serialization:
+#      INDENT_OUTPUT: true
+#jwt:
+#  header: Authorization
+#  secret: mySecret
+#  expiration: 604800
+#  route:
+#    authentication:
+#      path: auth
+#      refresh: refresh
+jwt: 
+  expiration: 604800
+  header: Authorization
+  route: 
+    authentication: 
+      path: auth
+      refresh: refresh
+  secret: mySecret
+server: 
+  contextPath: ~
+spring: 
+  datasource: 
+    password: "${DATABASE_PASSWORD}"
+    url: "jdbc:mysql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}"
+    username: "${DATABASE_USER}"
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+  jackson: 
+    serialization: 
+      INDENT_OUTPUT: true
+  profiles: container

@@ -73,6 +73,7 @@
         <java.version>1.8</java.version>
     </properties>
     <build>
+        <finalName>benestar</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
